@@ -1,1 +1,14 @@
-<tree-root [nodes]="nodes" [options]="options"></tree-root>
+<div class="container mt-4">
+  <h4>Mi arbolito</h4>
+  <tree-root [nodes]="nodes" [options]="options"></tree-root>
+  <br>
+  <button type="button" (click)="update()" class="btn btn-primary">Update </button>
+
+  <button type="button" (click)="log= !log" class="btn btn-outline-dark ml-3">Log it</button>
+
+  <ng-container *ngIf="log">
+    <pre>
+      {{ nodes | json }}
+    </pre>
+  </ng-container>
+</div>

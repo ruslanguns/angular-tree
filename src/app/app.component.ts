@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  log = false;
+
   nodes = [
     {
       id: 1,
@@ -28,5 +31,13 @@ export class AppComponent {
       ]
     }
   ];
-  options = {};
+
+  options = {
+    allowDrag: true
+  };
+
+  update() {
+    alert('Se ha actualizado!');
+  }
+
 }
